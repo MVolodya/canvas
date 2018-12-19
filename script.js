@@ -63,7 +63,14 @@
       circleArr[i].update();
     }
   }
-  generateCircles(15)
+
+  function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+  generateCircles(getRandom(1,50))
   animate();
 
 })();
